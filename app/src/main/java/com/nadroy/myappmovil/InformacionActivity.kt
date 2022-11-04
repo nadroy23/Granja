@@ -6,22 +6,28 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 
-class RegistrarActivity : AppCompatActivity() {
+class InformacionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registrar)
+        setContentView(R.layout.activity_informacion)
     }
 
-    fun inicio(btningresar: View){
-        val ingreso = Intent(this,LoginActivity::class.java)
+    fun horarios(btningresar: View){
+        val ingreso = Intent(this,CalendarioActivity::class.java)
         startActivity(ingreso)
     }
 
-    fun googleLogin(btningresar: View){
+    fun Alertas(btningresar: View){
         val dialogo = AlertDialog.Builder(this)
             .setTitle("¡Ops!")
             .setMessage("Esta funcionalidad aun no esta implementada...") // R.string.variable
             .create().show()
     }
 
+    fun Tareas(btningresar: View){
+        val dialogo = AlertDialog.Builder(this)
+            .setTitle("¡Ops!")
+            .setMessage("Esta funcionalidad aun no esta implementada...") // R.string.variable
+            .create().show()
+    }
 }
